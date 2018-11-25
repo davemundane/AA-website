@@ -11,6 +11,12 @@ function submitForm(){
 	eReq.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
 	eReq.send(message)
 
+	
+	document.getElementById("emailMessage").innerHTML = "<span>Thanks for your message, I'll get back to you as soon as possible</span>";
+	setTimeout(function(){
+		document.getElementById("emailMessage").innerHTML = "";
+	},3000);
+	
 	document.getElementById("main-contact-form").reset();
 	document.getElementById("main-contact-form").focus();
 	return false
